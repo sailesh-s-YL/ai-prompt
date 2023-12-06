@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="application/javascript" src="./main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Yantra Live AI Tool</title>
+    <link rel="icon" type="image/png" href="ylb.png">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+</head>
+
+<body>
+    <div class = "loader"></div>
+    <main>
+        <div class="header">
+            <h1 class = "head-text"></h1>
+            <nav>
+                <a href="https://www.yantralive.com/about/">
+                    <img src = "YL-Logo.png" class = "logo">
+                </a>
+            </nav>
+            <div class="textT">
+                <h1>AI Powered Detection Tool</h1>
+            </div>
+        </div>
+        <div class="container">
+                <div class = "left"> 
+                    <h2>Input</h2>
+                    <img src="Insert-Image-Here.png" class = "inpimg">
+                    <label for="file" class = "upload-label">Upload</label>
+                    <input type="file" name="file" id="file" accept="image/*" onchange="loadFile(event)" class = "input-file">
+                    <div class = "inputBox">
+                        <input type="text" required = "required" id="inputprompt">
+                        <span>Enter your Prompt here</span>
+                    </div>
+                    
+                            <button type="submit" onclick="uploadImage()" class = "submit-button">
+                                <span class="">Submit</span>
+                            </button>
+                    
+                </div>
+                <div class = "right">
+                    <h2>Output</h2>
+                    <div class= "opSide">
+                        <div class = "responsesBox">
+                            <output data-prediction-output="true" class="">
+                                <figure>
+                                    <div>
+                                        <!-- Big Text area -->
+                                        <textarea id="outputtext" name="w3review" rows="10" cols="50" readonly placeholder="Responses displayed here" class="rpbox"></textarea>
+                                    </div>
+                                </figure>
+                            </output>
+                        </div>
+                    </div>    
+                </div>
+        </div>
+    </main>
+</body>
+
+</html>
